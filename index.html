@@ -15,6 +15,10 @@
     <title>SwissMultiGroupe</title>
     <link rel="stylesheet" href="css/theme.min.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <style>
         /* inter-300 - latin */
         @font-face {
@@ -23,8 +27,8 @@
             font-weight: 300;
             font-display: swap;
             src: local(''),
-                url('./fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+                url('./fonts/inter-v12-latin-300.woff2') format('woff2'),
+                url('./fonts/inter-v12-latin-300.woff') format('woff');
         }
 
         @font-face {
@@ -33,8 +37,8 @@
             font-weight: 500;
             font-display: swap;
             src: local(''),
-                url('./fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+                url('./fonts/inter-v12-latin-500.woff2') format('woff2'),
+                url('./fonts/inter-v12-latin-500.woff') format('woff');
         }
 
         @font-face {
@@ -43,33 +47,30 @@
             font-weight: 700;
             font-display: swap;
             src: local(''),
-                url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+                url('./fonts/inter-v12-latin-700.woff2') format('woff2'),
+                url('./fonts/inter-v12-latin-700.woff') format('woff');
         }
 
         /* Stili per i dispositivi mobili */
         @media only screen and (max-width: 768px) {
             .navbar-nav {
-                display: none; /* Nascondi il menu su dispositivi mobili */
+                display: none;
             }
 
-            /* Stili per il logo solo nella visualizzazione mobile */
             .navbar-brand img {
-                margin-bottom: 0px; /* Sposta leggermente il logo in alto */
+                margin-bottom: 0px;
+                width: 20%; /* Modifica la larghezza del logo per adattarlo alla visualizzazione mobile */
             }
 
-            /* Stili per la box bianca */
             .bg-white {
-                background-color: rgba(255, 255, 255, 0.5); /* Imposta il colore di sfondo con una trasparenza del 50% */
-                padding: 2rem; /* Aggiungi spaziatura interna per mantenere il contenuto leggibile */
+                background-color: rgba(255, 255, 255, 0.5);
+                padding: 2rem;
             }
-            /* Aggiunta di una classe per uno sfondo trasparente al 50% */
+
             .bg-transparent-50 {
-            background-color: rgba(255, 255, 255, 0.5); /* Imposta il colore di sfondo con una trasparenza del 50% */
+                background-color: rgba(255, 255, 255, 0.5);
             }
 
-
-            /* Stili per il pulsante Contatti */
             .mobile-contact-button {
                 position: absolute;
                 top: 50%;
@@ -77,11 +78,17 @@
                 transform: translateY(-50%);
             }
 
-            /* Aggiustamento per centrare il tasto Contatti */
             .mobile-contact-button .btn {
                 margin: 0 auto;
                 display: block;
             }
+        }
+
+        /* Stili per la barra sopra i titoli dei servizi */
+        .border-top-bar {
+            border-top: 3px solid #000;
+            width: 100%;
+            margin-bottom: 20px;
         }
     </style>
 
@@ -126,36 +133,36 @@
                 </div>
                 <div class="row d-flex align-items-center">
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <span class="h5 fw-lighter">01.</span>
-                        <h3 class="py-5 border-top border-dark">Pulizie</h3>
+                        <div class="border-top-bar"></div>
+                        <h3 class="">Pulizie</h3>
                         <p>Utilizziamo prodotti omologati a Berna e garantiamo macchinari di qualità.</p>
                         <a href="#" class="link-fancy">Scopri di più</a>
                     </div>
 
                     <div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
-                        <span class="h5 fw-lighter">02.</span>
-                        <h3 class="py-5 border-top border-dark">Sgombero Neve</h3>
+                        <div class="border-top-bar"></div>
+                        <h3 class="">Sgombero Neve</h3>
                         <p>Il nostro personale formato e il nostro parco autoveicoli assicurano lo svolgimento del servizio richiesto in maniera tempestiva, efficiente e professionale.</p>
                         <a href="#" class="link-fancy">Scopri di più</a>
                     </div>
 
                     <div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
-                        <span class="h5 fw-lighter">03.</span>
-                        <h3 class="py-5 border-top border-dark">Giardinaggio</h3>
+                        <div class="border-top-bar"></div>
+                        <h3 class="">Giardinaggio</h3>
                         <p>Ci occupiamo della cura e della manutenzione dei giardini, garantendo spazi verdi splendidi e ben curati.</p>
-                        <a href="giardino.html" class="link-fancy">Scopri di più</a>
+                        <a href="#" class="link-fancy">Scopri di più</a>
                     </div>
 
                     <div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
-                        <span class="h5 fw-lighter">04.</span>
-                        <h3 class="py-5 border-top border-dark">Portineria</h3>
+                        <div class="border-top-bar"></div>
+                        <h3 class="">Portineria</h3>
                         <p>Offriamo servizi di portineria per garantire un ambiente sicuro e ben gestito negli edifici residenziali e commerciali.</p>
                         <a href="#" class="link-fancy">Scopri di più</a>
                     </div>
 
                     <div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
-                        <span class="h5 fw-lighter">05.</span>
-                        <h3 class="py-5 border-top border-dark">Traslochi</h3>
+                        <div class="border-top-bar"></div>
+                        <h3 class="">Traslochi</h3>
                         <p>Gestiamo traslochi efficienti e sicuri, assicurando che i tuoi beni arrivino a destinazione senza danni.</p>
                         <a href="#" class="link-fancy">Scopri di più</a>
                     </div>
@@ -191,7 +198,7 @@
     <script src="js/aos.js"></script>
     <script>
         AOS.init({
-            duration: 800, // values from 0 to 3000, with step 50ms
+            duration: 800,
         });
     </script>
 
