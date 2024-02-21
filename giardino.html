@@ -13,7 +13,11 @@
     <meta name="generator" content="Eleventy v2.0.0">
     <meta name="HandheldFriendly" content="true">
     <title>SwissMultiGroupe</title>
-    <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <style>
         /* inter-300 - latin */
@@ -50,22 +54,23 @@
         /* Stili per i dispositivi mobili */
         @media only screen and (max-width: 768px) {
             .navbar-nav {
-                display: none; /* Nascondi il menu su dispositivi mobili */
+                display: none;
             }
 
-            /* Stili per il logo solo nella visualizzazione mobile */
             .navbar-brand img {
-                margin-bottom: 0px; /* Sposta leggermente il logo in alto */
-                width: 20%; /* Aumenta la grandezza del logo del doppio */
-                object-fit: contain; /* Assicura che il logo mantenga le proporzioni */
+                margin-bottom: 0px;
+                width: 20%; /* Modifica la larghezza del logo per adattarlo alla visualizzazione mobile */
             }
 
-            /* Stili per la box bianca */
             .bg-white {
-                display: none; /* Nascondi la box bianca */
+                background-color: rgba(255, 255, 255, 0.5);
+                padding: 2rem;
             }
 
-            /* Stili per il pulsante Contatti mobile */
+            .bg-transparent-50 {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
             .mobile-contact-button {
                 position: absolute;
                 top: 50%;
@@ -73,12 +78,23 @@
                 transform: translateY(-50%);
             }
 
-            /* Aggiustamento per centrare il tasto Contatti mobile */
             .mobile-contact-button .btn {
                 margin: 0 auto;
                 display: block;
             }
         }
+
+        /* Stili per la barra sopra i titoli dei servizi */
+        .border-top-bar {
+            border-top: 3px solid #000;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .text-size {
+          font-size: 1.3em; /* Puoi regolare questo valore secondo le tue preferenze */
+        }
+
     </style>
 
 </head>
@@ -88,7 +104,7 @@
     <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
         <div class="container">
             <a class="navbar-brand pe-4 fs-4" href="index.html">
-                <img src="img/logo.png" alt="Swiss Multi Groupe" width="10%" height="10%" style="object-fit: contain;">
+                <img src="img/logo.png" alt="Swiss Multi Groupe" width="10%" height="10%">
             </a>
 
             <div class="mobile-contact-button">
@@ -100,22 +116,27 @@
     <main>
         <div class="w-100 overflow-hidden bg-gray-100" id="top">
             <div class="container position-relative">
-                <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/interior11.jpg);">
+                <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/copertina.jpg);">
                 </div>
-                <div class="row">
-                    <div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
-                      <!-- Rimuovo la scritta Swiss Multi Groupe e Servizi Domestici Professionali e Affidabili -->
-                    </div>
+                <div style="height: 600px;"></div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row justify-content-center mb-4" data-aos="fade" data-aos-delay="0">
+                <div class="col-md-8 text-center">
+                    <!-- Box invisibile per spazio aggiuntivo -->
+                    <div style="height: 40px; background-color: transparent;"></div>
+                    <h2 class="display-6">Giardinaggio</h2>
                 </div>
             </div>
         </div>
-
         <div class="py-vh-5 w-100 overflow-hidden" id="services">
             <div class="container">
-                <div class="row d-flex justify-content-end">
-                    <div class="col-lg-8" data-aos="fade-down">
-                        <h2 class="display-6">Giardinaggio</h2>
-                        <p>Ci occupiamo della cura e della manutenzione dei giardini. Il nostro team di esperti giardinieri utilizza tecniche innovative e rispettose dell'ambiente per garantire che il tuo giardino sia sempre verde, rigoglioso e ben curato. Dai la forma perfetta al tuo spazio verde con i nostri servizi di progettazione paesaggistica, potatura, piantagione e molto altro ancora.</p>
+                <div class="row justify-content-center align-items-stretch">
+                    <div class="col-lg-7 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="d-flex flex-column h-100">
+                            <p class="text-size">Ci occupiamo della cura e della manutenzione dei giardini. Il nostro team di esperti giardinieri utilizza tecniche innovative e rispettose dell'ambiente per garantire che il tuo giardino sia sempre verde, rigoglioso e ben curato. Dai la forma perfetta al tuo spazio verde con i nostri servizi di progettazione paesaggistica, potatura, piantagione e molto altro ancora.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -149,7 +170,7 @@
     <script src="js/aos.js"></script>
     <script>
         AOS.init({
-            duration: 800, // values from 0 to 3000, with step 50ms
+            duration: 800,
         });
     </script>
 
